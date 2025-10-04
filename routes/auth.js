@@ -97,7 +97,7 @@ router.put("/profile", verifyToken, async (req, res) => {
     });
 
   } catch (err) {
-    console.error("❌ Profil güncelleme hatası:", err);
+    console.error("Profil güncelleme hatası:", err);
     res.status(500).json({
       success: false,
       error: "Profil güncellenirken bir hata oluştu"
@@ -105,7 +105,7 @@ router.put("/profile", verifyToken, async (req, res) => {
   }
 });
 
-// ✅ PROFİL BİLGİLERİNİ GETİRME ENDPOINT'İ
+//  PROFİL BİLGİLERİNİ GETİRME ENDPOINT'İ
 router.get("/profile", verifyToken, async (req, res) => {
   const userId = req.userId;
 
@@ -136,7 +136,7 @@ router.get("/profile", verifyToken, async (req, res) => {
     });
 
   } catch (err) {
-    console.error("❌ Profil getirme hatası:", err);
+    console.error(" Profil getirme hatası:", err);
     res.status(500).json({
       success: false,
       error: "Profil bilgileri alınamadı"
@@ -144,7 +144,7 @@ router.get("/profile", verifyToken, async (req, res) => {
   }
 });
 
-// ✅ ŞİFRE DEĞİŞTİRME ENDPOINT'İ
+//  ŞİFRE DEĞİŞTİRME ENDPOINT'İ
 router.put("/change-password", verifyToken, async (req, res) => {
   const userId = req.userId;
   const { currentPassword, newPassword } = req.body;
@@ -188,7 +188,7 @@ router.put("/change-password", verifyToken, async (req, res) => {
     });
 
   } catch (err) {
-    console.error("❌ Şifre değiştirme hatası:", err);
+    console.error(" Şifre değiştirme hatası:", err);
     res.status(500).json({
       success: false,
       error: "Şifre değiştirilirken bir hata oluştu"
